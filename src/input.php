@@ -38,7 +38,7 @@
 			function myFunction() {
 				var d = new Date();
 				var n = d.getTimezoneOffset();				
-				document.getElementById("gmt").value = n/60;				
+				document.getElementById("gmt").value = n/-60;				
 			}
 			window.onload = myFunction;
 			
