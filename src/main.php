@@ -1,7 +1,3 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Zi Kai
- * Date: 23 Jan 2016
- * Time: 17:53
- */
+    print ("I am the CHICKEN MAN");
+?>
