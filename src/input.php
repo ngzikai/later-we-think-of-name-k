@@ -79,6 +79,12 @@
 									<p>Enter your preferred time
 										<input name="amount" type="text" id="amount" readonly>
 									</p>
+<<<<<<< HEAD
+=======
+									<p> GMT
+									<input name="gmt" type="text" id="gmt">
+									</p>
+>>>>>>> origin/master
 									<div id="slider-range"></div>
 									<br />
 									
