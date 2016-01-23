@@ -11,8 +11,8 @@ if ($file_handle) {
     	$trim = trim($line);
         //echo $trim;
 
-        $sql = "INSERT INTO dictionary 
-                VALUES '".$trim."'";
+        $sql = "INSERT INTO dictionary (entry, used)
+                VALUES ('".$trim."', 0)";
 
         echo $sql . "<br>";
         /*
