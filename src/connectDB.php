@@ -1,7 +1,7 @@
 <?php
 $servername = "www.stellarmen.com";
 $username = "stellarm";
-$password = "h4ccknr00ll";
+$password = "h44cknr00ll";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
