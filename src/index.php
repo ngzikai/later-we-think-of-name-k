@@ -34,8 +34,12 @@
 				<i class="icon fa-qq"></i>
 				<h2>LATERK</h2>
 				<p>lol we help popz ppl sync time</p>
-				<input type="submit" class="special" value="ENTER TIME" />
-				<input type="reset" class="alt" value="CREATE EVENT" />
+				<a href="input.php">
+					<input type="submit" class="special" value="ENTER TIME" />
+				</a>
+				<a href="newEvent.php">
+					<input type="reset" class="alt" value="CREATE EVENT" />
+				</a>
 			</section>
 
 		<!-- Footer -->
