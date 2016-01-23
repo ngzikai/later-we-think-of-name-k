@@ -1,7 +1,7 @@
 <?php
 
 //include scripts
-include 'connectDB.php';
+include 'connectdb.php';
 
 //variables
 $SUCCESS_REDIRECT_LOCATION = "newEvent.php?msg=success";
