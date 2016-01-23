@@ -30,6 +30,12 @@
 			$( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
 			  " - " + $( "#slider-range" ).slider( "values", 1 ) );
 		  });
+		  
+	
+			var d = new Date();
+			var n = d.getTimezoneOffset();
+			document.getElementById("gmt").innerHTML = n;
+		
 		</script>
 	</head>
 	<body class="landing">
@@ -64,6 +70,9 @@
 									<br />
 									<p>Enter your preferred time
 										<input name="amount" type="text" id="amount" readonly>
+									</p>
+									<p> GMT
+									<input name="gmt" type="text" id="gmt" readonly>
 									</p>
 									<div id="slider-range"></div>
 								</div>
