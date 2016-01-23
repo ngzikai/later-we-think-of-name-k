@@ -63,7 +63,7 @@
 									<input name="name" placeholder="Enter your name" type="text" />
 									<br />
 									<p>Enter your preferred time
-										<input name="amount "type="text" id="amount" readonly>
+										<input name="amount" type="text" id="amount" readonly>
 									</p>
 									<div id="slider-range"></div>
 								</div>
