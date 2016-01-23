@@ -39,7 +39,7 @@
 		</script>
 	</head>
 	<body class="landing">
-
+	<div id="gmt"></div>
 		<!-- Header -->
 			<header id="header" class="alt">
 				<h1><a href="index.php">Laterk</a></h1>
