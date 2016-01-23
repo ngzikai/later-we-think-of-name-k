@@ -11,11 +11,10 @@ if ($file_handle) {
                 VALUES (".$trim.", 0)";
 
 
-        if($conn->query($sql) or die(mysql_error())){
+        if($conn->query($sql) or die($conn->error()){
             echo $trim. " was added successfully! :)";
         }else{
             echo $trim . " was not added successfully :(<br>";
-            echo $mysqli->error."<br>";
         }
 
 
