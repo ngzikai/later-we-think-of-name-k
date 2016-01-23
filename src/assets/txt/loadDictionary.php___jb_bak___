@@ -1,7 +1,8 @@
 <?php
-$filename = "dictionary.txt";
+$filename = "http://laterk.stellarmen.com/assets/txt/dictionary.txt";
 $file = fopen($filename, 'r') or die ("Unable to open file!");
 $line = fgets($file);
+echo $line;
 /*
 while(!feof($file)){
     $line = fgets($file);
