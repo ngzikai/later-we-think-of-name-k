@@ -1,4 +1,6 @@
-$("#slider-range").slider({
+(function($) {
+    
+    $("#slider-range").slider({
     range: true,
     min: 0,
     max: 1440,
@@ -57,3 +59,4 @@ $("#slider-range").slider({
         $('.slider-time2').html(hours2 + ':' + minutes2);
     }
 });
+})(jQuery);
