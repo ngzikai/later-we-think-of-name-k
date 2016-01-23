@@ -3,18 +3,7 @@
 ini_set('display_errors',1); 
 error_reporting(E_ALL);
 
-$servername = "localhost";
-$username = "stellarm_laterk";
-$password = "h44cknr00ll";
-$dbname='stellarm_laterk';
-
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+include 'connectDB.php';
 
 $file_handle = @fopen("http://laterk.stellarmen.com/assets/txt/dictionary.txt", "r");
 if ($file_handle) {
