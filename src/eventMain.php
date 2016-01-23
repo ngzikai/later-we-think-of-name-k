@@ -46,37 +46,51 @@
 					<header class="major narrow">
 						<h2>Errrr event name supposed to be here<?php $_GET['event'] ?></h2>
 					</header>
-					<form action="addNewParticipant.php" method="POST">
-						<div class="container 75%">
-							<div class="row uniform 50%">
-								<div class="12u$">
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Participant</th>
-													<th>Code link</th>
-												</tr>
-											</thead>
-											<tbody>
-												<!-- Put for loop here to display retrieved participants -->
-												<tr>
-													<td>Alice</td>
-													<td>nugget</td>
-												</tr>
-												<tr>
-													<td>Bob</td>
-													<td>bone</td>
-												</tr>
-												<!-- End for loop -->
-											</tbody>
-										</table>
-									</div>
-									<h2>Add new participant</h2>
-									<input name="codelink" placeholder="Enter an unique code link" type="text" />
+					<div class="container 75%">
+						<div class="row uniform 50%">
+							<div class="12u$">
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Participant</th>
+												<th>Code link</th>
+											</tr>
+										</thead>
+										<tbody>
+											<!-- Put for loop here to display retrieved participants -->
+											<tr>
+												<td>Alice</td>
+												<td>nugget</td>
+											</tr>
+											<tr>
+												<td>Bob</td>
+												<td>bone</td>
+											</tr>
+											<!-- End for loop -->
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+			<section id="three" class="wrapper special">
+				<div class="inner">
+					<header class="major special">
+						<h2>So far 3-4pm is good</h2>
+					</header>
+				</div>
+			</section>
+			
+			<section id="two" class="wrapper style1">
+				<div class="inner">
+					<form action="addNewParticipant.php" method="POST">
+						<h2>Add new participant</h2>
+						<input name="codelink" placeholder="Enter an unique code link" type="text" />
 						<ul class="actions">
 							<li><input type="submit" class="special" value="Submit" /></li>
 						</ul>
