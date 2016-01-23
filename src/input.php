@@ -38,7 +38,7 @@
 						<h2>Enter time</h2>
 						<p>when you are free to have fun!</p>
 					</header>
-					<form action="submit_newEvent.php" method="POST">
+					<form action="submit_input.php" method="POST">
 						<div class="container 75%">
 							<div class="row uniform 50%">
 								<div class="12u$">
@@ -50,8 +50,7 @@
 										<div class="sliders_step1">
 											<div id="slider-range"></div>
 										</div>
-									</div>  
-									<?php echo 'insert' . $_GET['msg'] ;?>
+									</div>
 								</div>
 							</div>
 						</div>
