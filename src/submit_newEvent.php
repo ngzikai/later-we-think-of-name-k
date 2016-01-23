@@ -1,11 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Zi Kai
- * Date: 23 Jan 2016
- * Time: 17:58
- */
 
+//include scripts
+include 'connectDB.php';
+
+//variables
+$REDIRECT_LOCATION = 'newEvent.php';
+
+//functions
 function generateRandomString($length = 8) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -16,4 +17,19 @@ function generateRandomString($length = 8) {
     return $randomString;
 }
 
-echo generateRandomString();
+function insertAndRedirect($event_name, $event_code){
+	$sql = "INSERT INTO event_list VALUES (" . $event_name . ', ' . $event_code . ')';
+	if ($conn->query($sql) === TRUE) {
+		header('Location: '.$REDIRECT_LOCATION.'?msg=success');
+	}
+	else{
+		header('Location: '.$REDIRECT_LOCATION.'?msg=failure');
+	}
+}
+
+//main
+$event_name = $_POST['event_name'];
+$event_code = generateRandomString();
+insertAndRedirect($event_name, $event_code);
+?>
+

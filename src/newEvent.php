@@ -7,6 +7,7 @@
   Event name:<br>
   <input type="text" name="event_name"><br>
    <input type="submit" value="Submit">
+   <?php echo 'insert' . $_GET['msg'] ;?>
 </form> 
 </body>
 </html>
