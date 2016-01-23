@@ -9,6 +9,8 @@ if ($file_handle) {
         $sql = "INSERT INTO dictionary (entry, used)
                 VALUES ($line, 0)";
 
+        
+
     }
     if (!feof($file_handle)) {
         echo "Error: unexpected fgets() fail\n";
