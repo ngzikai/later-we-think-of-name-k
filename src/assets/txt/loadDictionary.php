@@ -1,6 +1,9 @@
 <?php
 include 'connectDB.php';
 
+ini_set('display_errors',1); 
+error_reporting(E_ALL);
+
 $file_handle = @fopen("http://laterk.stellarmen.com/assets/txt/dictionary.txt", "r");
 if ($file_handle) {
     while (($line = fgets($file_handle, 4096)) !== false) {
@@ -11,11 +14,10 @@ if ($file_handle) {
                 VALUES (".$trim.", 0)";
 
 
-        if($conn->query($sql) or die(mysql_error())){
+        if($conn->query($sql) === true){
             echo $trim. " was added successfully! :)";
         }else{
             echo $trim . " was not added successfully :(<br>";
-            echo $mysqli->error."<br>";
         }
 
 
