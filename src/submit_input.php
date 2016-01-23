@@ -15,10 +15,11 @@ $selectSql = "SELECT entry  FROM dictionary
 $result = $conn->query($selectSql);
 
 while($result[1] != 0){
-	$result = $conn->query($selectSql)->fetch_array(MYSQLI_ASSOC);
+	$result = $conn->query($selectSql);
+	$result_fetch->fetch_array(MYSQLI_ASSOC);	
 }
 
-$word = $result["entry"];
+$word = $result_fetch[1];
 
 $updateDictSql = "UPDATE dictionary
 				SET used = 1
