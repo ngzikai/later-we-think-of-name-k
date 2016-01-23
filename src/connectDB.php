@@ -1,6 +1,6 @@
 <?php
 $servername = "www.stellarmen.com";
-$username = "stellarm_laterk";
+$username = "stellarm";
 $password = "h4ccknr00ll";
 
 // Create connection
