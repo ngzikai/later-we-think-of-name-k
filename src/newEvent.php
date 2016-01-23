@@ -26,6 +26,8 @@
 			<nav id="nav">
 				<ul class="links">
 					<li><a href="index.php">Home</a></li>
+					<li><a href="input.php">Enter time</a></li>
+					<li><a href="newEvent.php">Create event</a></li>
 				</ul>
 			</nav>
 
