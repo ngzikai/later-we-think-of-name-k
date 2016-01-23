@@ -18,13 +18,12 @@ function generateRandomString($length = 8) {
 }
 
 function insertAndRedirect($event_name, $event_code){
-	$sql = "INSERT INTO event_list VALUES (" . $event_name . ', ' . $event_code . ')';
-	echo $sql;
+	$sql = "INSERT INTO event_list VALUES ('" . $event_name . "', '" . $event_code . "')";
 	if ($conn->query($sql) === TRUE) {
-		header('Location: '.$REDIRECT_LOCATION.'?msg=success');
+		header('Location: '.$SUCCESS_REDIRECT_LOCATION);
 	}
 	else{
-		header('Location: '.$REDIRECT_LOCATION.'?msg=failure');
+		header('Location: '.$FAILURE_REDIRECT_LOCATION);
 	}
 }
 
