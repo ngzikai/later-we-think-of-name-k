@@ -14,8 +14,8 @@ if ($file_handle) {
         if($conn->query($sql) === TRUE){
             echo $trim. " was added successfully! :)";
         }else{
-            echo $trim . " was not added successfully :(".<br>;
-            echo $mysqli->error.<br>;
+            echo $trim . " was not added successfully :(<br>";
+            echo $mysqli->error."<br>";
         }
 
 
