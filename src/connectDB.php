@@ -6,5 +6,7 @@ $dbname='stellarm_laterk';
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
-
+if ($conn->connection_error){
+	die('Connection to database failed: '.$conn->connect_error);
+}
 ?> 
