@@ -16,7 +16,7 @@ $result = $conn->query($selectSql);
 
 while($result[1] != 0){
 	$result = $conn->query($selectSql);
-	$result_fetch->fetch_array(MYSQLI_ASSOC);	
+	$result_fetch= $result->fetch_array(MYSQLI_ASSOC);	
 }
 
 $word = $result_fetch[1];
