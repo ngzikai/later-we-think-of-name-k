@@ -4,8 +4,8 @@
 include 'connectDB.php';
 
 //variables
-$REDIRECT_LOCATION = 'newEvent.php';
-
+$SUCCESS_REDIRECT_LOCATION = "newEvent.php?msg=success";
+$FAILURE_REDIRECT_LOCATION = "newEvent.php?msg=failure";
 //functions
 function generateRandomString($length = 8) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
