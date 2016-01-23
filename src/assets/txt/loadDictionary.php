@@ -5,18 +5,18 @@ $file_handle = @fopen("http://laterk.stellarmen.com/assets/txt/dictionary.txt", 
 if ($file_handle) {
     while (($line = fgets($file_handle, 4096)) !== false) {
     	$trim = trim($line);
-        echo $trim;
+        //echo $trim;
 
         $sql = "INSERT INTO dictionary (entry, used)
                 VALUES (".$trim.", 0)";
 
-       /* $success = mysql_query($sql);
+       $success = mysql_query($sql);
 
         if($succcess){
             echo $trim. " was added successfully! :)";
         }else{
             echo $trim . " was not added successfully :(.";
-        }*/
+        }
 
 
     }
