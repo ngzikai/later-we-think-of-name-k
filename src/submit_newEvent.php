@@ -29,11 +29,12 @@ $event_code = generateRandomString();
 $insertEventSuccess= insertEvent($event_name, $event_code, $conn);
 
 if ($insertEventSuccess){
-	header('Location: '.$SUCCESS_REDIRECT_LOCATION);
-	}
-	else{
-		header('Location: '.$FAILURE_REDIRECT_LOCATION);
-	}	
-	die();
+	header('Location: ' . $SUCCESS_REDIRECT_LOCATION);
+}
+else{
+		header('Location: ' . $FAILURE_REDIRECT_LOCATION);
+}
+	
+die();
 ?>
 

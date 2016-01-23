@@ -43,7 +43,7 @@
 							<div class="row uniform 50%">
 								<div class="12u$">
 									<input name="event_name" placeholder="Enter your event name" type="text" />
-									<?php echo 'insert' . $_GET['msg'] ;?>
+									<?php echo $_GET['msg'] ;?>
 								</div>
 							</div>
 						</div>
