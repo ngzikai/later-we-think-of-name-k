@@ -10,9 +10,8 @@ if ($file_handle) {
         $sql = "INSERT INTO dictionary (entry, used)
                 VALUES (".$trim.", 0)";
 
-       $success = mysql_query($sql);
 
-        if($succcess){
+        if($conn->query($sql) === TRUE){
             echo $trim. " was added successfully! :)";
         }else{
             echo $trim . " was not added successfully :(.";
