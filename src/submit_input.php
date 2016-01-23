@@ -14,7 +14,7 @@ $selectSql = "SELECT entry  FROM dictionary
 
 $result = $conn->query($selectSql);
 
-while($result["used"] != 0){
+while($result[1] != 0){
 	$result = $conn->query($selectSql);
 }
 
