@@ -1,8 +1,10 @@
 <?php
-
-$file = fopen("dictionary.txt", "r");
+$filename = "dictionary.txt";
+$file = fopen($filename, 'r') or die ("Unable to open file!");
+$line = fgets($file);
+/*
 while(!feof($file)){
     $line = fgets($file);
-    echo $line;
-}
+    echo $line . "<br>";
+}*/
 fclose($file);
