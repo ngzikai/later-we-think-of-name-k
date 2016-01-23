@@ -31,12 +31,15 @@ $range = $_POST['amount'];
 $startEndTimes = explode('-', $range);
 $startTime = trim($startEndTimes[0]);
 $endTime = trim($startEndTimes[1]);
+$gmt = $_POST['gmt'];
 
-$insertuserDataSql = "INSERT INTO user_data (shortlink, username, starttime, endtime)
-                	VALUES ('".$word."', '".$_POST['name']."', '".$startTime."', '".$endTime."')";
+$insertuserDataSql = "INSERT INTO user_data (shortlink, username, starttime, endtime, gmt)
+                	VALUES ('".$word."', '".$_POST['name']."', '".$startTime."', '".$endTime."','". $gmt . "')";
 
 $conn->query($updateDictSql) or die ($conn->error);
 $conn->query($insertuserDataSql) or die ($conn->error);
+
+
 
 
 //return $word;
