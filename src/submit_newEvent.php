@@ -18,28 +18,19 @@ function generateRandomString($length = 8) {
     return $randomString;
 }
 
-function insertAndRedirect($event_name, $event_code){
+function insertAndRedirect($event_name, $event_code, $conn){
 	$sql = "INSERT INTO event_list (event_name, event_code) VALUES ('" . $event_name . "', '" . $event_code . "')";
-	echo $sql;
 	if ($conn->query($sql) === TRUE) {
-		//header('Location: '.$SUCCESS_REDIRECT_LOCATION);
+		header('Location: '.$SUCCESS_REDIRECT_LOCATION);
 	}
 	else{
-		//header('Location: '.$FAILURE_REDIRECT_LOCATION);
+		header('Location: '.$FAILURE_REDIRECT_LOCATION);
 	}
 }
 
 //main
 $event_name = $_POST['event_name'];
 $event_code = generateRandomString();
-//insertAndRedirect($event_name, $event_code);
-	$sql = "INSERT INTO event_list (event_name, event_code) VALUES ('" . $event_name . "', '" . $event_code . "')";
-	echo $sql;
-	if ($conn->query($sql) === TRUE) {
-		//header('Location: '.$SUCCESS_REDIRECT_LOCATION);
-	}
-	else{
-		//header('Location: '.$FAILURE_REDIRECT_LOCATION);
-	}
+insertAndRedirect($event_name, $event_code, $conn);
 ?>
 
