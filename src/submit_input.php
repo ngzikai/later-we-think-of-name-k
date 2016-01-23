@@ -8,7 +8,7 @@ include 'connectDB.php';
 //$startTime = $_POST["start time"];
 //$endTime = $_POST["end time"];
 
-$selectSql = "SELECT entry  FROM dictionary
+$selectSql = "SELECT *  FROM dictionary
 			ORDER BY RAND()
 			LIMIT 1";
 
