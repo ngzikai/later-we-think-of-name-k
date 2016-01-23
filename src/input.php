@@ -39,7 +39,6 @@
 		</script>
 	</head>
 	<body class="landing">
-	<div id="gmt"></div>
 		<!-- Header -->
 			<header id="header" class="alt">
 				<h1><a href="index.php">Laterk</a></h1>
@@ -56,6 +55,8 @@
 			</nav>
 
 		<!-- Four -->
+			<div id="gmt"></div>
+
 			<section id="four" class="wrapper style2 special">
 				<div class="inner">
 					<header class="major narrow">
