@@ -19,7 +19,7 @@
   	<br>
   	<button type="button">Get Code Link</button> 
 
-
+	<script src="assets/js/jquery.min.js"></script>
 	<script src="/assets/js/slider_time.js"></script>
 	
        	
