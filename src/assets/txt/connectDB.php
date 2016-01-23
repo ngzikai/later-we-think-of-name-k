@@ -5,7 +5,7 @@ $password = "h44cknr00ll";
 $dbname='stellarm_laterk';
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Check connection
 if (!$conn) {
