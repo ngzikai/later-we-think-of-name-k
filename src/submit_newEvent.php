@@ -19,7 +19,7 @@ function generateRandomString($length = 8) {
 }
 
 function insertAndRedirect($event_name, $event_code){
-	$sql = "INSERT INTO event_list VALUES ('" . $event_name . "', '" . $event_code . "')";
+	$sql = "INSERT INTO event_list (event_name, event_code) VALUES ('" . $event_name . "', '" . $event_code . "')";
 	echo $sql;
 	if ($conn->query($sql) === TRUE) {
 		header('Location: '.$SUCCESS_REDIRECT_LOCATION);
