@@ -26,7 +26,7 @@ function insertAndRedirect($event_name, $event_code, $conn){
 	else{
 		header('Location: '.$FAILURE_REDIRECT_LOCATION);
 	}
-	return;
+	die();
 }
 
 //main
