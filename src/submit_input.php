@@ -15,7 +15,7 @@ $selectSql = "SELECT entry  FROM dictionary
 $result = $conn->query($selectSql);
 
 while($result[1] != 0){
-	$result = $conn->query($selectSql);
+	$result = $conn->query($selectSql)->fetch_array(MYSQLI_ASSOC);
 }
 
 $word = $result["entry"];
