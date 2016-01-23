@@ -17,6 +17,7 @@
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 		<script>
+			
 		  $(function() {
 			$( "#slider-range" ).slider({
 			  range: true,
@@ -29,12 +30,19 @@
 			});
 			$( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
 			  " - " + $( "#slider-range" ).slider( "values", 1 ) );
+			  
 		  });
 		  
-	
-			var d = new Date();
-			var n = d.getTimezoneOffset();
-			document.getElementById("gmt").innerHTML = n;
+		
+			
+			function myFunction() {
+				var d = new Date();
+				var n = d.getTimezoneOffset();
+				
+				document.getElementById("gmt").value = n;
+			}
+			window.onload = myFunction;
+			
 		
 		</script>
 	</head>
@@ -55,8 +63,6 @@
 			</nav>
 
 		<!-- Four -->
-			<div id="gmt"></div>
-
 			<section id="four" class="wrapper style2 special">
 				<div class="inner">
 					<header class="major narrow">
@@ -69,13 +75,16 @@
 								<div class="12u$">
 									<input name="name" placeholder="Enter your name" type="text" />
 									<br />
+									
 									<p>Enter your preferred time
 										<input name="amount" type="text" id="amount" readonly>
 									</p>
-									<p> GMT
-									<input name="gmt" type="text" id="gmt" readonly>
-									</p>
 									<div id="slider-range"></div>
+									<br />
+									
+									<p>GMT</p>
+									<input name="gmt" type="text" id="gmt" readonly>
+									
 								</div>
 							</div>
 						</div>
