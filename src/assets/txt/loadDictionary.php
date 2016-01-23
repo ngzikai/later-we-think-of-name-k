@@ -14,12 +14,13 @@ if ($file_handle) {
         $sql = "INSERT INTO dictionary 
                 VALUES '".$trim."'";
 
-
+        echo $sql . "<br>";
+        /*
 		if ($conn->query($sql) === TRUE) {
 		    echo $trim;
 		} else {
 		    echo "Error: " . $sql . "<br>" . $conn->error;
-		}
+		}*/
 
 
     }
