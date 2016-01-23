@@ -55,8 +55,6 @@
 			</nav>
 
 		<!-- Four -->
-			<div id="gmt"></div>
-
 			<section id="four" class="wrapper style2 special">
 				<div class="inner">
 					<header class="major narrow">
@@ -73,7 +71,7 @@
 										<input name="amount" type="text" id="amount" readonly>
 									</p>
 									<p> GMT
-									<input name="gmt" type="text" id="gmt" readonly>
+									<input name="gmt" type="text" id="gmt">
 									</p>
 									<div id="slider-range"></div>
 								</div>
