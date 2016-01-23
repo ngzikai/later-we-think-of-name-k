@@ -12,11 +12,11 @@ if ($file_handle) {
         //echo $trim;
 
         $sql = "INSERT INTO dictionary 
-                VALUES ".$trim.";
+                VALUES '".$trim."'";
 
 
 		if ($conn->query($sql) === TRUE) {
-		    echo $trim." New record created successfully";
+		    echo $trim;
 		} else {
 		    echo "Error: " . $sql . "<br>" . $conn->error;
 		}
