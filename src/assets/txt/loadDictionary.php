@@ -15,12 +15,13 @@ if ($file_handle) {
                 VALUES ('".$trim."', 0)";
 
         echo $sql . "<br>";
-        /*
+
+        
 		if ($conn->query($sql) === TRUE) {
 		    echo $trim;
 		} else {
 		    echo "Error: " . $sql . "<br>" . $conn->error;
-		}*/
+		}
 
 
     }
