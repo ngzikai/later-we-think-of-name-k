@@ -14,11 +14,11 @@ if ($file_handle) {
                 VALUES (".$trim.", 0)";
 
 
-        if($conn->query($sql) === true){
-            echo $trim. " was added successfully! :)";
-        }else{
-            echo $trim . " was not added successfully :(<br>";
-        }
+		if ($conn->query($sql) === TRUE) {
+		    echo $trim." New record created successfully";
+		} else {
+		    echo "Error: " . $sql . "<br>" . $conn->error;
+		}
 
 
     }
