@@ -13,6 +13,24 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script>
+		  $(function() {
+			$( "#slider-range" ).slider({
+			  range: true,
+			  min: 0,
+			  max: 24,
+			  values: [ 0, 24 ],
+			  slide: function( event, ui ) {
+				$( "#amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+			  }
+			});
+			$( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+			  " - " + $( "#slider-range" ).slider( "values", 1 ) );
+		  });
+		</script>
 	</head>
 	<body class="landing">
 
@@ -43,14 +61,11 @@
 							<div class="row uniform 50%">
 								<div class="12u$">
 									<input name="name" placeholder="Enter your name" type="text" />
-									<br /><br />
-									<p>Enter your preferred time</p>
-									<div id="time-range">
-										<p>Time Range: <span class="slider-time">10:00 AM</span> - <span class="slider-time2">12:00 PM</span></p>
-										<div class="sliders_step1">
-											<div id="slider-range"></div>
-										</div>
-									</div>
+									<br />
+									<p>Enter your preferred time
+										<input type="text" id="amount" readonly>
+									</p>
+									<div id="slider-range"></div>
 								</div>
 							</div>
 						</div>
@@ -88,8 +103,8 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/slider_time.js"></script>
+			<!--<script src="assets/js/jquery.min.js"></script>-->
+			<!--<script src="assets/js/slider_time.js"></script>-->
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
