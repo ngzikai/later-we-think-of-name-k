@@ -24,9 +24,16 @@ $word = $row["entry"];
 $updateDictSql = "UPDATE dictionary
 				SET used = 1
 				WHERE entry = '".$word."'";
+//$startTime = $_POST['amount'];
+
+$range = $_POST['amount'];
+
+$startEndTimes = explode('-', $range);
+$startTime = trim($startEndTimes[0]);
+$endTime = trim($startEndTimes[1]);
 
 $insertuserDataSql = "INSERT INTO user_data (shortlink, username, starttime, endtime)
-                	VALUES ('".$word."', '".$name."', '".$startTime."', '".$endTime."')";
+                	VALUES ('".$word."', '".$_POST['name']."', '".$startTime."', '".$endTime."')";
 
 $conn->query($updateDictSql) or die ($conn->error);
 $conn->query($insertuserDataSql) or die ($conn->error);
