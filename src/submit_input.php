@@ -12,10 +12,10 @@ $selectSql = "SELECT entry  FROM dictionary
 			ORDER BY RAND()
 			LIMIT 1";
 
-$result = $conn->query($sql);
+$result = $conn->query($selectSql);
 
 while($result["used"] != 0){
-	$result = $conn->query($sql);
+	$result = $conn->query($selectSql);
 }
 
 $word = $result["entry"];
@@ -26,6 +26,9 @@ $updateDictSql = "UPDATE dictionary
 
 $insertuserDataSql = "INSERT INTO user_data (shortlink, username, starttime, endtime)
                 	VALUES ('".$word."', '".$name."', '".$startTime."', '".$endTime."')";
+
+$conn->query($updateDictSql) or die ($conn->error);
+$conn->query($insertuserDataSql) or die ($conn->error);
 
 
 //return $word;
