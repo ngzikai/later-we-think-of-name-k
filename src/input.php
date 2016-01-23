@@ -19,5 +19,9 @@
   	<br>
   	<button type="button">Get Code Link</button> 
 
+
+	<script src="assets/js/slider_time.js"></script>
 </body>
 </html>
+
+
