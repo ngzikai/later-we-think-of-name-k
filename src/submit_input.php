@@ -13,13 +13,13 @@ $selectSql = "SELECT entry  FROM dictionary
 			LIMIT 1";
 
 $result = $conn->query($selectSql);
+$row = mysqli_fetch_assoc($result);
 
-while($result[1] != 0){
-	$result = $conn->query($selectSql);
-	$result_fetch= $result->fetch_array(MYSQLI_ASSOC);	
+while($row["used"] != 0){
+	$row = mysqli_fetch_assoc($result);
 }
 
-$word = $result_fetch[1];
+$word = $row["entry"];
 
 $updateDictSql = "UPDATE dictionary
 				SET used = 1
