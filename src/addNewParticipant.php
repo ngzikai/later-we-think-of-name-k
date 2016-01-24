@@ -118,7 +118,8 @@ function processAnswerArray($answerArray, $localGMT) {
 	$returnStr = "The ideal time to meet is ";
 
 	if (sizeof($answerArray) == 1) {
-		$returnStr .= "at " . $answerArray[0]. "00hrs";
+		$start = formatTime($answerArray[0]);
+		$returnStr .= "at " . $start. "00hrs";
 	} elseif (sizeof($answerArray) == 0) {
 		$returnStr = "There is no ideal time to meet :(";
 	} else {
