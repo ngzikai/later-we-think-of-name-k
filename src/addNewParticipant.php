@@ -146,9 +146,9 @@ function processAnswerArray($answerArray, $localGMT) {
 		$end = formatTime($end, $localGMT);
 
 		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
-
-		return $returnStr;
 	}
+	
+	return $returnStr;
 }
 
 function processTime($time, $gmt){
