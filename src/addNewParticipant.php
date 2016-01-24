@@ -94,6 +94,7 @@ if(in_array($noOfParticipant, $timeArray)){
 	for ($i = 0; $i < 24; $i++) {
 		if($timeArray[$i] == $noOfParticipant){
 			array_push($answerArray, $timeArray[$i]);
+			echo "Pushed " .$timeArray[$i]. " into answerArray. <br>"
 		}
 	}
 
@@ -108,7 +109,7 @@ if(in_array($noOfParticipant, $timeArray)){
 function processAnswerArray($answerArray) {
 
 	foreach ($answerArray as $answer) {
-		echo "Element: " . $answer ."<br>";
+		echo "Element: " . intval($answer) ."<br>";
 	}
 
 	$returnStr = "The ideal time to meet is ";
