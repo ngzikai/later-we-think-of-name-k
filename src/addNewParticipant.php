@@ -116,10 +116,8 @@ function processAnswerArray($answerArray, $localGMT) {
 	if (sizeof($answerArray) == 1) {
 		$start = formatTime($answerArray[0], $localGMT);
 		$returnStr .= "at " . $start. "00hrs";
-		return $returnStr;
 	} elseif (sizeof($answerArray) == 0) {
 		$returnStr = "There is no ideal time to meet :(";
-			return $returnStr;
 	} else {
 		//$returnStr .= "between ";
 		//$previousAnswer = -1;
@@ -144,9 +142,8 @@ function processAnswerArray($answerArray, $localGMT) {
 		$end = formatTime($end, $localGMT);
 
 		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
-
-		return $returnStr;
 	}
+	return $returnStr;
 }
 
 function processTime($time, $gmt){
