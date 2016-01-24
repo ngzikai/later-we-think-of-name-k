@@ -68,7 +68,8 @@
 												echo '<td>' . $row[1] . '</td>';
 												echo '<td>' . $row[0] . '</td>';
 												echo '</tr>';
-											}								
+											}
+											?>											
 										</tbody>
 									</table>
 								</div>
