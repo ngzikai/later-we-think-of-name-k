@@ -48,7 +48,7 @@ foreach ($shortLinkArray as $sl) {
    $selectSql1 = "SELECT * FROM user_data
 			WHERE shortlink = '".$sl."'";
 
-	$result = $conn->($selectSql1);
+	$result = $conn->query($selectSql1);
 
 	$startTime = $result["starttime"];
 	$endTime = $result["endtime"];
