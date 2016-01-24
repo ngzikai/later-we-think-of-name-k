@@ -28,7 +28,7 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="input.php">Enter time</a></li>
 					<li><a href="newEvent.php">Create event</a></li>
-					<li><a href="#">Contack Us</a></li>
+					<li><a href="#">Contact Us</a></li>
 				</ul>
 			</nav>
 
