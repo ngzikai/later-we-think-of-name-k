@@ -33,7 +33,8 @@
 
 		<!-- Banner -->
 			<section id="banner">
-				<i class="fa fa-calendar fa-3x"></i> 
+				<i class="fa fa-calendar fa-4x"></i>
+				<br>
 				<h2>LATERK</h2>
 				<p>We help popz ppl to sync time</p>
 				<a href="input.php">
