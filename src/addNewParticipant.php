@@ -62,6 +62,7 @@ foreach ($shortLinkArray as $sl) {
 	echo "<br>";
 	echo "GMT: ";
 	echo $gmt;
+	echo "<br>";
 
 	if($startTime < $endTime){
 		while($startTime != $endTime){
@@ -105,6 +106,11 @@ if(in_array($noOfParticipant, $timeArray)){
 
 
 function processAnswerArray($answerArray) {
+
+	foreach ($answerArray as $answer) {
+		echo "Element: " . $answer ."<br>";
+	}
+
 	$returnStr = "The ideal time to meet is ";
 
 	if (sizeof($answerArray) == 1) {
