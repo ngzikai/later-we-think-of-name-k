@@ -97,12 +97,12 @@ if(in_array($noOfParticipant, $timeArray)){
 	for ($i = 0; $i < 24; $i++) {
 		if($timeArray[$i] == $noOfParticipant){
 			array_push($answerArray, $i);
-			echo "Pushed " .$i. " into answerArray. <br>";
+			//echo "Pushed " .$i. " into answerArray. <br>";
 		}
 	}
 
 	$str = processAnswerArray($answerArray, $localGMT);
-	echo $str;
+	//echo $str;
 
 	header('Location: eventMain.php?event='.$eventCode.'&returnStr="'.$str.'"');
 	
