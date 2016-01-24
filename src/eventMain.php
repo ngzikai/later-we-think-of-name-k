@@ -83,7 +83,6 @@
 			<section id="three" class="wrapper special">
 				<div class="inner">
 					<header class="major special">
-					
 						<?php echo "<h2>". $_GET['returnStr'] ."</h2>";?>
 					
 					</header>
@@ -92,6 +91,14 @@
 			<?php } ?>
 			<section id="two" class="wrapper style1">
 				<div class="inner">
+						<script>function myFunction() {
+						var d = new Date();
+						var n = d.getTimezoneOffset();				
+						document.getElementById("gmt").value = n/-60;				
+						}
+						window.onload = myFunction;
+					</script>
+						<input type="hidden" name="gmt" id="gmt">				
 					    <form action="addNewParticipant.php" method="POST">
 						<h2>Add new participant</h2>
 						<input name="shortlink" placeholder="Enter an unique code link" type="text" />
