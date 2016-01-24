@@ -52,7 +52,6 @@
 											<!-- Put for loop here to display retrieved participants -->
 											<?php
 											$sql="SELECT DISTINCT u.shortlink, u.username FROM event_participants e, user_data u WHERE e.event_code = '" . $_GET['event'] . "' && u.shortlink = e.shortlink"; 
-											echo $sql;
 											$result = $conn->query($sql);
 											while($row = mysqli_fetch_assoc($result)){
 												echo '<tr>';
@@ -74,20 +73,25 @@
 				</div>
 			</section>
 			
-			
+			<?php
+				if (isset($_GET['returnStr'])){
+					?>
 			<section id="three" class="wrapper special">
 				<div class="inner">
 					<header class="major special">
-						<h2>So far 3-4pm is good</h2>
+					
+						<?php echo "<h2>". $_GET['returnStr'] ."</h2>";?>
+					
 					</header>
 				</div>
 			</section>
-			
+			<?php } ?>
 			<section id="two" class="wrapper style1">
 				<div class="inner">
-					<form action="addNewParticipant.php" method="POST">
+					    <form action="addNewParticipant.php" method="GET">
 						<h2>Add new participant</h2>
-						<input name="codelink" placeholder="Enter an unique code link" type="text" />
+						<input name="shortlink" placeholder="Enter an unique code link" type="text" />
+						<?php echo '<input name="event_code" type="hidden" value="'.$_GET['event'].'">'; ?>
 						<ul class="actions">
 							<li><input type="submit" class="special" value="Submit" /></li>
 						</ul>
