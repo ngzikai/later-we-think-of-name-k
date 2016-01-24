@@ -57,10 +57,10 @@
 											while($row = mysqli_fetch_assoc($result)){
 												echo '<tr>';
 												echo '<td>';
-												echo $row['u.username'];
+												echo $row['username'];
 												echo '</td>';
 												echo '<td>'; 
-												echo $row['u.shortlink'];
+												echo $row['shortlink'];
 												echo '</td>';
 												echo '</tr>';
 											}
