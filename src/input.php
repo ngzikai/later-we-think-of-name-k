@@ -90,7 +90,7 @@
 						<ul class="actions">
 						
 							<?php
-								if ($_POST['event']==""){
+								if ($_GET['event']==""){
 									echo '<li><input type="submit" class="special" value="Get code link" /></li>';
 								} else{
 									echo 'YOUR CODE IS '.$_GET['event'];
