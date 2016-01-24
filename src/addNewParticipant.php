@@ -15,10 +15,6 @@ if ($conn->query($sqlInsert) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$sql = "INSERT INTO dictionary (entry, used)
-        VALUES ('".$trim."', 0)";
-
-
 $selectSql = "SELECT * FROM event_participants
 			WHERE event_code = '".$eventCode."'";
 

@@ -33,11 +33,11 @@
 
 		<!-- Banner -->
 			<section id="banner">
-				<i class="icon fa-qq"></i>
+				<i class="fa fa-calendar-check-o"></i> fa-lg
 				<h2>LATERK</h2>
-				<p>lol we help popz ppl sync time</p>
+				<p>We help popz ppl to sync time</p>
 				<a href="input.php">
-					<input type="submit" class="special" value="ENTER TIME" />
+					<input type="submit" class="special" value="INPUT PERSONAL TIME SLOT" />
 				</a>
 				<a href="newEvent.php">
 					<input type="reset" class="alt" value="CREATE EVENT" />
