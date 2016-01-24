@@ -98,10 +98,14 @@ if(in_array($noOfParticipant, $timeArray)){
 		}
 	}
 
-	$str = processAnswerArray($answerArray);
+	$resultsArr = processAnswerArray($answerArray);
 	//echo $str;
 
-	header('Location: eventMain.php?event_code='.$eventCode.'&returnStr="'.$str.'"');
+	$returnStart = $resultsArr[0];
+	$returnEnd = $resultsArr[1];
+
+
+	header('Location: eventMain.php?event_code='.$eventCode.'&start="'.$returnStart.'"&end="'.$returnEnd.'"');
 	
 }
 
@@ -141,9 +145,11 @@ function processAnswerArray($answerArray) {
 		$start = formatTime($start);
 		$end = formatTime($end);
 
-		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
+		$returnArr = array();
+		array_push($returnArr, $start);
+		array_push($returnArr, $end);
 
-		return $returnStr;
+		return $returnArr;
 	}
 }
 
