@@ -66,7 +66,7 @@
 				<div class="inner">
 					<header class="major narrow">
 						<h2>Enter time</h2>
-						<p>when you are free to have fun!</p>
+						<p>Busy like a bee you are...</p>
 					</header>
 					<form action="submit_input.php" method="POST">
 						<div class="container 75%">
@@ -75,7 +75,7 @@
 									<input name="name" placeholder="Enter your name" type="text" />
 									<br />
 									
-									<p>Enter your preferred time
+									<p>Enter your preferred time period
 										<input name="amount" type="text" id="amount" readonly>
 									</p>
 									<div id="slider-range"></div>
