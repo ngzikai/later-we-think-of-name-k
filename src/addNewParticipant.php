@@ -93,8 +93,8 @@ $answerArray = array();
 if(in_array($noOfParticipant, $timeArray)){
 	for ($i = 0; $i < 24; $i++) {
 		if($timeArray[$i] == $noOfParticipant){
-			array_push($answerArray, $timeArray[$i]);
-			echo "Pushed " .$timeArray[$i]. " into answerArray. <br>";
+			array_push($answerArray, $i);
+			echo "Pushed " .$i. " into answerArray. <br>";
 		}
 	}
 
@@ -122,6 +122,7 @@ function processAnswerArray($answerArray) {
 		//$returnStr .= "between ";
 		//$previousAnswer = -1;
 		//$counter = 0;
+		
 		$arraySize = sizeof($answerArray);
 		$start = $answerArray[0];
 		$end = $answerArray[$arraySize - 1];
