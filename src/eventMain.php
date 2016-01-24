@@ -59,15 +59,16 @@
 										</thead>
 										<tbody>
 											<!-- Put for loop here to display retrieved participants -->
-											<tr>
-												<td>Alice</td>
-												<td>nugget</td>
-											</tr>
-											<tr>
-												<td>Bob</td>
-												<td>bone</td>
-											</tr>
-											<!-- End for loop -->
+											<?php
+											$sql="SELECT DISTINCT u.shortlink, u.username FROM EVENT_PARTICIPANTS e, USER_DATA u WHERE event_code = " . $_GET['event'] . "&& u.shortlink = e.shortlink"; 
+											echo $sql;
+											$result = $conn->query($sql);
+											while($row = mysqli_fetch_assoc($result)){
+												echo '<tr>';
+												echo '<td>' . $row[1] . '</td>';
+												echo '<td>' . $row[0] . '</td>';
+												echo '</tr>';
+											}								
 										</tbody>
 									</table>
 								</div>
