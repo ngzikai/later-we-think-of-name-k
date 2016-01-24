@@ -93,7 +93,7 @@
 								if ($_POST['event']==""){
 									echo '<li><input type="submit" class="special" value="Get code link" /></li>';
 								} else{
-									echo 'YOUR CODE IS '.$_POST['event'];
+									echo 'YOUR CODE IS '.$_GET['event'];
 								}
 								?>
 						</ul>
