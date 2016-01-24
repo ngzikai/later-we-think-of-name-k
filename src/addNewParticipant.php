@@ -94,7 +94,7 @@ if(in_array($noOfParticipant, $timeArray)){
 	for ($i = 0; $i < 24; $i++) {
 		if($timeArray[$i] == $noOfParticipant){
 			array_push($answerArray, $timeArray[$i]);
-			echo "Pushed " .$timeArray[$i]. " into answerArray. <br>"
+			echo "Pushed " .$timeArray[$i]. " into answerArray. <br>";
 		}
 	}
 
