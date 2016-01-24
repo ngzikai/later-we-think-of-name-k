@@ -39,7 +39,7 @@ $insertuserDataSql = "INSERT INTO user_data (shortlink, username, starttime, end
 
 $conn->query($updateDictSql) or die ($conn->error);
 $conn->query($insertuserDataSql) or die ($conn->error);
-header('Location: input.php?event='.$word);
+header('Location: input.php?shortlink='.$word);
 ?>
 
 

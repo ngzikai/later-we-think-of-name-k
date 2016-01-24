@@ -90,10 +90,10 @@
 						<ul class="actions">
 						
 							<?php
-								if ($_GET['event']==""){
+								if ($_GET['shortlink']==""){
 									echo '<li><input type="submit" class="special" value="Get code link" /></li>';
 								} else{
-									echo 'YOUR CODE IS <a href="eventMain.php?event=' . $_GET['event'] . '">'.$_GET['event']."</a>" ;
+									echo 'YOUR CODE IS ' . $_GET['shortlink'];
 								}
 								?>
 						</ul>
