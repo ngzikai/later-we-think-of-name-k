@@ -104,7 +104,7 @@ if(in_array($noOfParticipant, $timeArray)){
 	$str = processAnswerArray($answerArray, $localGMT);
 	//echo $str;
 
-	header('Location: eventMain.php?event_code='.$eventCode.'&returnStr="'.$str.'"');
+	header('Location: eventMain.php?event='.$eventCode.'&returnStr="'.$str.'"');
 	
 }
 
