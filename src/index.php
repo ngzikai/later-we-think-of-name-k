@@ -36,7 +36,7 @@
 			<section id="banner">
 				<i class="fa fa-calendar fa-4x"></i>
 				<br>
-				<h2>LATER,K</h2>
+				<h2>LATER, K</h2>
 				<p>Schedule   Meetings   Across   Different   TimeZones</p>
 				<a href="input.php">
 					<input type="submit" class="special" value="INPUT TIME SLOT" />
