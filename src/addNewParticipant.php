@@ -54,13 +54,13 @@ foreach ($shortLinkArray as $sl) {
 	$startTime = processTime($startTime, $gmt);
 	$endTime = processTime($endTime, $gmt);
 
-	echo "StartTime: "
+	echo "StartTime: ";
 	echo $startTime;
 	echo <br>;
-	echo "End Time:"
+	echo "End Time:";
 	echo $endTime;
 	echo <br>;
-	echo "GMT: "
+	echo "GMT: ";
 	echo $gmt;
 	echo <br>;
 
