@@ -51,8 +51,12 @@ foreach ($shortLinkArray as $sl) {
 	$endTime = intval($row["endtime"]);
 	$gmt = intval($row["gmt"]);
 
-	$startTime = $startTime - $gmt;
-	$endTime = $endTime - $gmt;
+	$startTime = processTime($startTime, $gmt);
+	$endTime = processTime($endTime, $gmt);
+
+	echo $startTime;
+	echo $endTime;
+	echo $gmt;
 
 	if($startTime < $endTime){
 		while($startTime != $endTime){
@@ -127,6 +131,16 @@ function processAnswerArray($answerArray) {
 
 		return $returnStr;
 	}
+}
+
+function processTime($time, $gmt){
+	$convertedTime = $time - $gmt;
+
+	if($convertedTime < 0){
+		$convertedTime += 24;
+	}
+
+	return $convertedTime;
 }
 
 
