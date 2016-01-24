@@ -6,6 +6,7 @@ include 'connectDB.php';
 
 $shortlink = $_POST["shortlink"];
 $eventCode = $_POST["event_code"];
+$localGMT = $_POST["gmt"];
 
 $sqlInsert = "INSERT INTO event_participants (event_code, shortlink)
         		VALUES ('".$eventCode."', '".$shortlink."')";
@@ -158,6 +159,14 @@ function processTime($time, $gmt){
 }
 
 function formatTime($time){
+	$time += $localGMT;
+
+	if($time >= 24){
+		$time -= 24;
+	}elseif($time < 0){
+		$time += 24;
+	}
+
 	$timeStr = strval($time);
 
 	if(strlen($timeStr) == 1){
