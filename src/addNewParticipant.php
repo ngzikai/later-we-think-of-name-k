@@ -96,7 +96,7 @@ if(in_array($noOfParticipant, $timeArray)){
 	$str = processAnswerArray($answerArray);
 	echo $str;
 
-	header('Location: http://laterk.stellarmen.com/?event_code='.$event_code.'&returnStr="'.$str'"']);
+	//header('Location: http://laterk.stellarmen.com/?event_code='.$event_code.'&returnStr="'.$str'"']);
 }
 
 
