@@ -112,8 +112,8 @@ function processAnswerArray($answerArray) {
 		//$previousAnswer = -1;
 		//$counter = 0;
 		$arraySize = sizeof($answerArray);
-		$start = arr[0];
-		$end = arr[$arraySize - 1];
+		$start = $answerArray[0];
+		$end = $answerArray[$arraySize - 1];
 
 		if ($start != 1 && $end != 24) {
 			// do nothing
@@ -125,7 +125,7 @@ function processAnswerArray($answerArray) {
 				}
 			}
 		}
-		$returnStr .= "between " .$start. " and " .$end.;
+		$returnStr .= "between " .$start. " and " .$end;
 
 		return $returnStr;
 	}
