@@ -4,8 +4,8 @@
 include 'connectDB.php';
 
 //variables
-$SUCCESS_REDIRECT_LOCATION = "newEvent.php?msg=insert success";
-$FAILURE_REDIRECT_LOCATION = "index.php?msg=insert failed";
+$SUCCESS_REDIRECT_LOCATION = "newEvent.php?event_code=";
+$FAILURE_REDIRECT_LOCATION = "index.php";
 
 //functions
 function generateRandomString($length = 8) {
@@ -29,7 +29,7 @@ $event_code = generateRandomString();
 $insertEventSuccess= insertEvent($event_name, $event_code, $conn);
 
 if ($insertEventSuccess){
-	header('Location: ' . $SUCCESS_REDIRECT_LOCATION);
+	header('Location: ' . $SUCCESS_REDIRECT_LOCATION. $event_code);
 }
 else{
 		header('Location: ' . $FAILURE_REDIRECT_LOCATION);
