@@ -127,9 +127,7 @@ function processAnswerArray($answerArray) {
 		$start = $answerArray[0];
 		$end = $answerArray[$arraySize - 1];
 
-		 if ($start == 0 && $end == 23) {
-		 	// do nothing
-		 } else {
+
 		 	for($i = 1; $i < $arraySize; $i++) {
 		 		echo "$i: ". $answerArray[$i]. "<br>";
 		 		echo "$i+1: " .$answerArray[$i-1]. "<br>";
@@ -139,7 +137,6 @@ function processAnswerArray($answerArray) {
 					$end = $answerArray[$i-1];
 
 				}
-			}
 		}
 		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
 
