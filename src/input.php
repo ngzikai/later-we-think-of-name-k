@@ -81,8 +81,7 @@
 									<div id="slider-range"></div>
 									<br />
 									
-									<p>GMT</p>
-									<input name="gmt" type="text" id="gmt" readonly>
+									<p>GMT:<input name="gmt" type="text" id="gmt" readonly></p>
 									
 								</div>
 							</div>
