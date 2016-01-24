@@ -57,15 +57,15 @@ foreach ($shortLinkArray as $sl) {
 	$startTime = processTime($startTime, $gmt);
 	$endTime = processTime($endTime, $gmt);
 
-	// echo "StartTime: ";
-	// echo $startTime;
-	// echo "<br>";
-	// echo "End Time:";
-	// echo $endTime;
-	// echo "<br>";
-	// echo "GMT: ";
-	// echo $gmt;
-	// echo "<br>";
+	echo "StartTime: ";
+	echo $startTime;
+	echo "<br>";
+	echo "End Time:";
+	echo $endTime;
+	echo "<br>";
+	echo "GMT: ";
+	echo $gmt;
+	echo "<br>";
 
 	if($startTime < $endTime){
 		while($startTime != $endTime){
@@ -97,7 +97,7 @@ if(in_array($noOfParticipant, $timeArray)){
 	for ($i = 0; $i < 24; $i++) {
 		if($timeArray[$i] == $noOfParticipant){
 			array_push($answerArray, $i);
-			//echo "Pushed " .$i. " into answerArray. <br>";
+			echo "Pushed " .$i. " into answerArray. <br>";
 		}
 	}
 
