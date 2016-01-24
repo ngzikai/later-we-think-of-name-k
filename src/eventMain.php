@@ -35,7 +35,11 @@
 			<section id="four" class="wrapper style2 special">
 				<div class="inner">
 					<header class="major narrow">
-						<?php echo "<h2>Errrr event name supposed to be here " . $_GET['event'] . "</h2>";?>
+					<?php
+						$sql="SELECT event_name FROM event_list WHERE event_code = '" . $_GET['event'] . "'"; 
+						$result = $conn->query($sql);
+						$row = mysqli_fetch_assoc($result)
+						echo "<h2>". $row[0] . "</h2>";?>
 					</header>
 					<div class="container 75%">
 						<div class="row uniform 50%">
