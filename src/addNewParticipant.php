@@ -8,6 +8,8 @@ $shortlink = $_POST["shortlink"];
 $eventCode = $_POST["event_code"];
 $localGMT = $_POST["gmt"];
 
+$localGMT = intval($localGMT);
+
 $sqlInsert = "INSERT INTO event_participants (event_code, shortlink)
         		VALUES ('".$eventCode."', '".$shortlink."')";
 
