@@ -12,7 +12,7 @@ $sqlInsert = "INSERT INTO event_participants (event_code, shortlink)
 
 if ($conn->query($sqlInsert) === TRUE) {
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sqlInsert. "<br>" . $conn->error;
 }
 
 $selectSql = "SELECT * FROM event_participants
@@ -92,7 +92,7 @@ if(in_array($noOfParticipant, $timeArray)){
 	$str = processAnswerArray($answerArray);
 	echo $str;
 
-	//header('Location: http://laterk.stellarmen.com/?event_code='.$event_code.'&returnStr="'.$str'"']);
+	header('Location: http://laterk.stellarmen.com/?event_code='.$event_code.'&returnStr="'.$str'"');
 }
 
 
