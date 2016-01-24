@@ -38,12 +38,16 @@
 						<h2>Create event</h2>
 						<p>for ppl to join and stuff</p>
 					</header>
+					<?php 
+					if (isset($_GET['event_code'])){
+						echo '<p>share this link with your friends yoooo (if not it will be gone 4ever)</p>';
+						echo '<a href = "laterk.stellarmen.com/eventMain/' . $_GET['event_code'] . '/">' . 'laterk.stellarmen.com/eventMain/'.$_GET['event_code']."</a>"
+					}else{
 					<form action="submit_newEvent.php" method="POST">
 						<div class="container 75%">
 							<div class="row uniform 50%">
 								<div class="12u$">
-									<input name="event_name" placeholder="Enter your event name" type="text" />
-									<?php echo $_GET['msg'] ;?>
+									<input name="event_name" placeholder="Enter your event name" type="text" />																																	
 								</div>
 							</div>
 						</div>
@@ -51,6 +55,8 @@
 							<li><input type="submit" class="special" value="Submit" /></li>
 						</ul>
 					</form>
+								}
+					?>
 				</div>
 			</section>
 
