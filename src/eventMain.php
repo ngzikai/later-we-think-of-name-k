@@ -39,7 +39,7 @@
 						$sql="SELECT event_name FROM event_list WHERE event_code = '" . $_GET['event'] . "'"; 
 						$result = $conn->query($sql);
 						$row = mysqli_fetch_assoc($result);
-						echo "<h2>". $row[0] . "</h2>";?>
+						echo "<h2>". $row['event_name'] . "</h2>";?>
 					</header>
 					<div class="container 75%">
 						<div class="row uniform 50%">
