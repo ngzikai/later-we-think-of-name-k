@@ -99,8 +99,9 @@
 			<?php } ?>
 			<section id="two" class="wrapper style1">
 				
-						<input type="hidden" name="gmt" id="gmt">				
+							
 					    <form action="addNewParticipant.php" method="POST">
+						<input type="hidden" name="gmt" id="gmt">		
 						<h2>Add new participant</h2>
 						<input name="shortlink" placeholder="Enter an unique code link" type="text" />
 						<?php echo '<input type="hidden" name="event_code" value="'.$_GET['event'].'">'; ?>
