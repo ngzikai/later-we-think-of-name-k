@@ -47,9 +47,9 @@ foreach ($shortLinkArray as $sl) {
 	$result = $conn->query($selectSql1);
 	$row = mysqli_fetch_assoc($result);
 
-	$startTime = $row["starttime"];
-	$endTime = $row["endtime"];
-	$gmt = $row["gmt"];
+	$startTime = intval($row["starttime"]);
+	$endTime = intval($row["endtime"]);
+	$gmt = intval($row["gmt"]);
 
 	$startTime = $startTime - $gmt;
 	$endTime = $endTime - $gmt;
