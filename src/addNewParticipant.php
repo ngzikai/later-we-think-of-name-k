@@ -125,7 +125,7 @@ function processAnswerArray($answerArray) {
 				}
 			}
 		}
-		$returnStr .= "between " .$start. " and " .$end.;
+		$returnStr .= "between " .$start. " and " .$end;
 
 		return $returnStr;
 	}
