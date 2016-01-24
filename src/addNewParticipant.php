@@ -45,10 +45,11 @@ foreach ($shortLinkArray as $sl) {
 			WHERE shortlink = '".$sl."'";
 
 	$result = $conn->query($selectSql1);
+	$row = mysqli_fetch_assoc($result);
 
-	$startTime = $result["starttime"];
-	$endTime = $result["endtime"];
-	$gmt = $result["gmt"];
+	$startTime = $row["starttime"];
+	$endTime = $row["endtime"];
+	$gmt = $row["gmt"];
 
 	$startTime = $startTime - $gmt;
 	$endTime = $endTime - $gmt;
