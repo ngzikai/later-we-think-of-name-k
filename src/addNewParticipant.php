@@ -56,7 +56,7 @@ foreach ($shortLinkArray as $sl) {
 
 	if($startTime < $endTime){
 		while($startTime != $endTime){
-			$timeArray[$startTime] = $timeArray + 1;
+			$timeArray[$startTime] = $timeArray[$startTime] + 1;
 			$startTime++;
 		}
 	}elseif($startTime == $endTime){
