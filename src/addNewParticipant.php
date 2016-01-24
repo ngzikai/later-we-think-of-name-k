@@ -93,6 +93,7 @@ if(in_array($noOfParticipant, $timeArray)){
 	echo $str;
 
 	//header('Location: eventMain.php?event_code='.$event_code.'&returnStr='.$str);
+	
 }
 
 
