@@ -60,10 +60,10 @@
 										<tbody>
 											<!-- Put for loop here to display retrieved participants -->
 											<?php
-											$sql="SELECT DISTINCT u.shortlink, u.username FROM EVENT_PARTICIPANTS e, USER_DATA u WHERE event_code = " . $_GET['event'] . "&& u.shortlink = e.shortlink"; 
+											$sql="SELECT DISTINCT u.shortlink, u.username FROM EVENT_PARTICIPANTS e, USER_DATA u WHERE event_code = '" . $_GET['event'] . "' && u.shortlink = e.shortlink"; 
 											echo $sql;
 											$result = $conn->query($sql);
-											while($row = mysqli_fetch_assoc($result)){
+											while($row = mysql_fetch_assoc($result)){
 												echo '<tr>';
 												echo '<td>' . $row[1] . '</td>';
 												echo '<td>' . $row[0] . '</td>';
