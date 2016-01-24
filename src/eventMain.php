@@ -101,7 +101,7 @@
 				
 							
 					    <form action="addNewParticipant.php" method="POST">
-						<h2>Add new participant</h2>
+						<h2>Add a new friend or type in your code to see what's your best time to meet! </h2>
 						<input name="shortlink" placeholder="Enter an unique code link" type="text" />
 						<input type="hidden" name="gmt" id="gmt" />		
 						<?php echo '<input type="hidden" name="event_code" value="'.$_GET['event'].'">'; ?>
