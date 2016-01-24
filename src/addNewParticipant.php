@@ -127,7 +127,6 @@ function processAnswerArray($answerArray) {
 		$start = $answerArray[0];
 		$end = $answerArray[$arraySize - 1];
 
-
 		 	for($i = 1; $i < $arraySize; $i++) {
 		 		echo "$i: ". $answerArray[$i]. "<br>";
 		 		echo "$i+1: " .$answerArray[$i-1]. "<br>";
@@ -138,6 +137,10 @@ function processAnswerArray($answerArray) {
 
 				}
 		}
+
+		$start = formatTime($start);
+		$end = formatTime($end);
+
 		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
 
 		return $returnStr;
@@ -153,6 +156,17 @@ function processTime($time, $gmt){
 
 	return $convertedTime;
 }
+
+function formatTime($time){
+	$timeStr = strval($time);
+
+	if(strlen($timeStr) == 1){
+		$timeStr = "0".$timeStr;
+	}
+
+	return $timeStr;
+}
+
 
 
 
