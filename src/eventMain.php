@@ -30,16 +30,6 @@
 					<li><a href="newEvent.php">Create event</a></li>
 				</ul>
 			</nav>
-
-		<!-- Does this get the parameter from the URL? -->
-		<?php
-			if (isset($_GET['event'])) {
-				echo $_GET['event'];
-			} else {
-				//Fallback behaviour goes here
-			}
-		?>
-		
 		<!-- Four -->
 			<section id="four" class="wrapper style2 special">
 				<div class="inner">
@@ -63,7 +53,7 @@
 											$sql="SELECT DISTINCT u.shortlink, u.username FROM event_participants e, user_data u WHERE e.event_code = '" . $_GET['event'] . "' && u.shortlink = e.shortlink"; 
 											echo $sql;
 											$result = $conn->query($sql);
-											while($row = mysql_fetch_assoc($result)){
+											while($row = mysqli_fetch_assoc($result)){
 												echo '<tr>';
 												echo '<td>' . $row[1] . '</td>';
 												echo '<td>' . $row[0] . '</td>';
