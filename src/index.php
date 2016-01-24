@@ -33,7 +33,7 @@
 
 		<!-- Banner -->
 			<section id="banner">
-				<i class="fa fa-calendar-check-o"></i> fa-lg
+				<i class="fa fa-calendar-check-o fa-lg"></i> 
 				<h2>LATERK</h2>
 				<p>We help popz ppl to sync time</p>
 				<a href="input.php">
