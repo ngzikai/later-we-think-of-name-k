@@ -54,9 +54,15 @@ foreach ($shortLinkArray as $sl) {
 	$startTime = processTime($startTime, $gmt);
 	$endTime = processTime($endTime, $gmt);
 
+	echo "StartTime: "
 	echo $startTime;
+	echo <br>;
+	echo "End Time:"
 	echo $endTime;
+	echo <br>;
+	echo "GMT: "
 	echo $gmt;
+	echo <br>;
 
 	if($startTime < $endTime){
 		while($startTime != $endTime){
