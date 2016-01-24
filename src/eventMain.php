@@ -56,7 +56,7 @@
 											$result = $conn->query($sql);
 											while($row = mysqli_fetch_assoc($result)){
 												echo '<tr>';
-												echo '<td>'
+												echo '<td>';
 												echo "lol";
 												echo '</td>';
 												echo '<td>'; 
