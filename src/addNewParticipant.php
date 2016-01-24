@@ -8,7 +8,7 @@ $shortlink = $_POST["shortlink"];
 $eventCode = $_POST["event_code"];
 
 $sqlInsert = "INSERT INTO event_participants (event_code, shortlink)
-        		VALUES ('".$event_code."', '".$shortlink."')";
+        		VALUES ('".$eventCode."', '".$shortlink."')";
 
 if ($conn->query($sqlInsert) === TRUE) {
 } else {
