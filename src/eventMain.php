@@ -44,7 +44,7 @@
 			<section id="four" class="wrapper style2 special">
 				<div class="inner">
 					<header class="major narrow">
-						<?php echo "<h2>Errrr event name supposed to be here" . $_GET['event'] . "</h2>";?>
+						<?php echo "<h2>Errrr event name supposed to be here " . $_GET['event'] . "</h2>";?>
 					</header>
 					<div class="container 75%">
 						<div class="row uniform 50%">
