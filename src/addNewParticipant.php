@@ -101,7 +101,7 @@ if(in_array($noOfParticipant, $timeArray)){
 		}
 	}
 
-	$str = processAnswerArray($answerArray);
+	$str = processAnswerArray($answerArray, $localGMT);
 	//echo $str;
 
 	header('Location: eventMain.php?event_code='.$eventCode.'&returnStr="'.$str.'"');
@@ -109,7 +109,7 @@ if(in_array($noOfParticipant, $timeArray)){
 }
 
 
-function processAnswerArray($answerArray) {
+function processAnswerArray($answerArray, $localGMT) {
 
 	foreach ($answerArray as $answer) {
 		//echo "Element: " . intval($answer) ."<br>";
@@ -141,8 +141,8 @@ function processAnswerArray($answerArray) {
 				}
 		}
 
-		$start = formatTime($start);
-		$end = formatTime($end);
+		$start = formatTime($start, $localGMT);
+		$end = formatTime($end, $localGMT);
 
 		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
 
@@ -160,7 +160,7 @@ function processTime($time, $gmt){
 	return $convertedTime;
 }
 
-function formatTime($time){
+function formatTime($time, $localGMT){
 	$time += $localGMT;
 
 	if($time >= 24){
