@@ -38,7 +38,7 @@
 				<h2>LATERK</h2>
 				<p>We help popz ppl to sync time</p>
 				<a href="input.php">
-					<input type="submit" class="special" value="INPUT PERSONAL TIME SLOT" />
+					<input type="submit" class="special" value="INPUT TIME SLOT" />
 				</a>
 				<a href="newEvent.php">
 					<input type="reset" class="alt" value="CREATE EVENT" />
