@@ -35,15 +35,11 @@ $gmt = $_POST['gmt'];
 
 $insertuserDataSql = "INSERT INTO user_data (shortlink, username, starttime, endtime, gmt)
                 	VALUES ('".$word."', '".$_POST['name']."', '".$startTime."', '".$endTime."','". $gmt . "')";
-echo $insertuserDataSql;
+
 
 $conn->query($updateDictSql) or die ($conn->error);
 $conn->query($insertuserDataSql) or die ($conn->error);
-
-
-
-
-//return $word;
-
+header('Location: eventMain.php?event='.$word);
+?>
 
 
