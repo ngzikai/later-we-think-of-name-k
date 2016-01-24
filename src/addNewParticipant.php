@@ -12,7 +12,7 @@ $sqlInsert = "INSERT INTO event_participants (event_code, shortlink)
 
 if ($conn->query($sqlInsert) === TRUE) {
 } else {
-    echo "Error: " . $sqlInsert. "<br>" . $conn->error;
+    //echo "Error: " . $sqlInsert. "<br>" . $conn->error;
 }
 
 $selectSql = "SELECT * FROM event_participants
@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
     	array_push($shortLinkArray, $shortLink);
     }
 } else {
-    echo "0 results";
+    //echo "0 results";
 }
 
 //for each shortLink, process dates
@@ -54,15 +54,15 @@ foreach ($shortLinkArray as $sl) {
 	$startTime = processTime($startTime, $gmt);
 	$endTime = processTime($endTime, $gmt);
 
-	echo "StartTime: ";
-	echo $startTime;
-	echo "<br>";
-	echo "End Time:";
-	echo $endTime;
-	echo "<br>";
-	echo "GMT: ";
-	echo $gmt;
-	echo "<br>";
+	// echo "StartTime: ";
+	// echo $startTime;
+	// echo "<br>";
+	// echo "End Time:";
+	// echo $endTime;
+	// echo "<br>";
+	// echo "GMT: ";
+	// echo $gmt;
+	// echo "<br>";
 
 	if($startTime < $endTime){
 		while($startTime != $endTime){
@@ -94,12 +94,12 @@ if(in_array($noOfParticipant, $timeArray)){
 	for ($i = 0; $i < 24; $i++) {
 		if($timeArray[$i] == $noOfParticipant){
 			array_push($answerArray, $i);
-			echo "Pushed " .$i. " into answerArray. <br>";
+			//echo "Pushed " .$i. " into answerArray. <br>";
 		}
 	}
 
 	$str = processAnswerArray($answerArray);
-	echo $str;
+	//echo $str;
 
 	header('Location: eventMain.php?event_code='.$eventCode.'&returnStr="'.$str.'"');
 	
@@ -109,7 +109,7 @@ if(in_array($noOfParticipant, $timeArray)){
 function processAnswerArray($answerArray) {
 
 	foreach ($answerArray as $answer) {
-		echo "Element: " . intval($answer) ."<br>";
+		//echo "Element: " . intval($answer) ."<br>";
 	}
 
 	$returnStr = "The ideal time to meet is ";
@@ -128,8 +128,8 @@ function processAnswerArray($answerArray) {
 		$end = $answerArray[$arraySize - 1];
 
 		 	for($i = 1; $i < $arraySize; $i++) {
-		 		echo "$i: ". $answerArray[$i]. "<br>";
-		 		echo "$i+1: " .$answerArray[$i-1]. "<br>";
+		 		//echo "$i: ". $answerArray[$i]. "<br>";
+		 		//echo "$i+1: " .$answerArray[$i-1]. "<br>";
 				if ($answerArray[$i] - $answerArray[$i-1] != 1) {
 					echo "CONDITION TRIGGERED <br>";
 					$start = $answerArray[$i];
