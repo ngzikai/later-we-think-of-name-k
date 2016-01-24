@@ -36,7 +36,7 @@
 				<div class="inner">
 					<header class="major narrow">
 						<h2>Create event</h2>
-						<p>for ppl to join and stuff</p>
+						<p>Yet another event? So popz...</p>
 					</header>
 					<?php 
 					if (isset($_GET['event_code'])){
