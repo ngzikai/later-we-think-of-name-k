@@ -88,22 +88,29 @@ if(in_array($noOfParticipant, $timeArray)){
 function processAnswerArray() {
 	$returnStr = "The ideal time to meet is ";
 
-	if(sizeof($answerArray) == 1){
+	if (sizeof($answerArray) == 1) {
 		$returnStr .= "at " . $answerArray[0]. "00hrs";
-	}elseif(sizeof($answerArray) == 0){
+	} elseif (sizeof($answerArray) == 0) {
 		$returnStr = "There is no ideal time to meet :(";
-	}else{
-		$returnStr .= "between ";
+	} else {
+		//$returnStr .= "between ";
+		//$previousAnswer = -1;
+		//$counter = 0;
 		$arraySize = sizeof($answerArray);
-		$previousAnswer = -1;
+		$start = arr[0];
+		$end = arr[$arraySize - 1];
 
-		for($i = 0; $i < $arraySize; $i++){
-			if($previousAnswer == -1){
-				$returnStr .= $answerArray[$i] "00hrs";
-			}else{
-
+		if ($start != 1 && $end != 24) {
+			// do nothing
+		} else {
+			for($i = 0; $i < $arraySize; $i++) {
+				if ($answerArray[$i+1] - $answerArray[i] != 1) {
+					$start = $answerArray[$i+1];
+					$end = $answerArray[$i];
+				}
 			}
 		}
+		$returnStr .= "between " .$start. " and " .$end.;
 	}
 }
 
