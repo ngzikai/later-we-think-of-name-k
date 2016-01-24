@@ -80,16 +80,13 @@ foreach ($shortLinkArray as $sl) {
 	}
 }
 
-$newStartRange = -1;
-$newEndRange = -1;
-
 $answerArray = array();
 
 //loop through array
 
 if(in_array($noOfParticipant, $timeArray)){
 	for ($i = 0; $i < 24; $i++) {
-		if($timeArray[$i] = $noOfParticipant){
+		if($timeArray[$i] == $noOfParticipant){
 			array_push($answerArray, $timeArray[$i]);
 		}
 	}
@@ -117,17 +114,17 @@ function processAnswerArray($answerArray) {
 		$start = $answerArray[0];
 		$end = $answerArray[$arraySize - 1];
 
-		if ($start != 1 && $end != 24) {
-			// do nothing
-		} else {
-			for($i = 0; $i < $arraySize; $i++) {
-				if ($answerArray[$i+1] - $answerArray[$i] != 1) {
-					$start = $answerArray[$i+1];
-					$end = $answerArray[$i];
-				}
-			}
-		}
-		$returnStr .= "between " .$start. " and " .$end;
+		// if ($start != 1 && $end != 24) {
+		// 	// do nothing
+		// } else {
+		// 	for($i = 0; $i < $arraySize; $i++) {
+		// 		if ($answerArray[$i+1] - $answerArray[$i] != 1) {
+		// 			$start = $answerArray[$i+1];
+		// 			$end = $answerArray[$i];
+		// 		}
+		// 	}
+		// }
+		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
 
 		return $returnStr;
 	}
