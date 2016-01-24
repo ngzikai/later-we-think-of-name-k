@@ -56,8 +56,12 @@
 											$result = $conn->query($sql);
 											while($row = mysqli_fetch_assoc($result)){
 												echo '<tr>';
-												echo '<td>' . $row[1] . '</td>';
-												echo '<td>' . $row[0] . '</td>';
+												echo '<td>'
+												echo "lol";
+												echo '</td>';
+												echo '<td>'; 
+												echo "lol";
+												echo '</td>';
 												echo '</tr>';
 											}
 											?>											
