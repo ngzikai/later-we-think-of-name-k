@@ -155,6 +155,7 @@ function processTime($time, $gmt){
 	}
 
 	return $convertedTime;
+	
 }
 
 function formatTime($time, $localGMT){
