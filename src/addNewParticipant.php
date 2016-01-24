@@ -56,10 +56,10 @@ foreach ($shortLinkArray as $sl) {
 
 	echo "StartTime: ";
 	echo $startTime;
-	echo <br>;
+	echo "<br>";
 	echo "End Time:";
 	echo $endTime;
-	echo <br>;
+	echo "<br>";
 	echo "GMT: ";
 	echo $gmt;
 
