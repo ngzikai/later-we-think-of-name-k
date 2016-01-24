@@ -41,7 +41,7 @@
 					<?php 
 					if (isset($_GET['event_code'])){
 						echo '<p>share this link with your friends yoooo (if not it will be gone 4ever)</p>';
-						echo '<a href = "laterk.stellarmen.com/eventMain/' . $_GET['event_code'] . '/">' . 'laterk.stellarmen.com/eventMain/'.$_GET['event_code']."</a>"
+						echo '<a href = "laterk.stellarmen.com/eventMain/' . $_GET['event_code'] . '/">' . 'laterk.stellarmen.com/eventMain/'.$_GET['event_code']."</a>";
 					}else{
 					<form action="submit_newEvent.php" method="POST">
 						<div class="container 75%">
