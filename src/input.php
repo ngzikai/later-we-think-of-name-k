@@ -88,7 +88,14 @@
 							</div>
 						</div>
 						<ul class="actions">
-							<li><input type="submit" class="special" value="Get code link" /></li>
+						
+							<?php
+								if ($_POST['event']==""){
+									echo '<li><input type="submit" class="special" value="Get code link" /></li>';
+								} else{
+									echo 'YOUR CODE IS '.$_POST['event'];
+								}
+								?>
 						</ul>
 					</form>
 				</div>
