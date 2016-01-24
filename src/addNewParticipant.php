@@ -62,7 +62,6 @@ foreach ($shortLinkArray as $sl) {
 	echo <br>;
 	echo "GMT: ";
 	echo $gmt;
-	echo <br>;
 
 	if($startTime < $endTime){
 		while($startTime != $endTime){
