@@ -14,6 +14,14 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<div class="inner">
+						<script>function myFunction() {
+						var d = new Date();
+						var n = d.getTimezoneOffset();				
+						document.getElementById("gmt").value = n/-60;				
+						}
+						window.onload = myFunction;
+					</script>
 	</head>
 	<body class="landing">
 
@@ -90,14 +98,7 @@
 			</section>
 			<?php } ?>
 			<section id="two" class="wrapper style1">
-				<div class="inner">
-						<script>function myFunction() {
-						var d = new Date();
-						var n = d.getTimezoneOffset();				
-						document.getElementById("gmt").value = n/-60;				
-						}
-						window.onload = myFunction;
-					</script>
+				
 						<input type="hidden" name="gmt" id="gmt">				
 					    <form action="addNewParticipant.php" method="POST">
 						<h2>Add new participant</h2>
