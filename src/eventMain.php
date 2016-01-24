@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<?php include 'connectDB.php'; ?>
 <!--
 	Retrospect by TEMPLATED
 	templated.co @templatedco
