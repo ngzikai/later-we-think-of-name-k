@@ -127,8 +127,8 @@ function processAnswerArray($answerArray) {
 		$start = $answerArray[0];
 		$end = $answerArray[$arraySize - 1];
 
-		 if ($start != 1 && $end != 24) {
-		// 	// do nothing
+		 if ($start == 0 && $end == 23) {
+		 	// do nothing
 		 } else {
 		 	for($i = 1; $i < $arraySize; $i++) {
 				if ($answerArray[$i] - $answerArray[$i-1] != 1) {
