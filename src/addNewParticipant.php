@@ -130,11 +130,11 @@ function processAnswerArray($answerArray) {
 		 if ($start != 1 && $end != 24) {
 		// 	// do nothing
 		 } else {
-		 	for($i = 0; $i < $arraySize; $i++) {
-				if ($answerArray[$i+1] - $answerArray[$i] != 1) {
-					$start = $answerArray[$i+1];
-					$end = $answerArray[$i];
-					
+		 	for($i = 1; $i < $arraySize; $i++) {
+				if ($answerArray[$i] - $answerArray[$i-1] != 1) {
+					$start = $answerArray[$i];
+					$end = $answerArray[$i-1];
+
 				}
 			}
 		}
