@@ -4,7 +4,20 @@ error_reporting(E_ALL);
 
 include 'connectDB.php';
 
-//$eventCode = $_POST["eventCode"];
+$shortlink = $_POST["shortlink"];
+$eventCode = $_POST["event_code"];
+
+$sqlInsert = "INSERT INTO event_participants (event_code, shortlink)
+        		VALUES ('".$event_code."', '".$shortlink."')";
+
+if ($conn->query($sqlInsert) === TRUE) {
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$sql = "INSERT INTO dictionary (entry, used)
+        VALUES ('".$trim."', 0)";
+
 
 $selectSql = "SELECT * FROM event_participants
 			WHERE event_code = '".$eventCode."'";
@@ -82,10 +95,12 @@ if(in_array($noOfParticipant, $timeArray)){
 
 	$str = processAnswerArray($answerArray);
 	echo $str;
+
+	header('Location: http://laterk.stellarmen.com/?event_code="'.$event_code.'"&returnStr="'.$str'"']);
 }
 
 
-function processAnswerArray() {
+function processAnswerArray($answerArray) {
 	$returnStr = "The ideal time to meet is ";
 
 	if (sizeof($answerArray) == 1) {
@@ -111,6 +126,8 @@ function processAnswerArray() {
 			}
 		}
 		$returnStr .= "between " .$start. " and " .$end.;
+
+		return $returnStr;
 	}
 }
 
