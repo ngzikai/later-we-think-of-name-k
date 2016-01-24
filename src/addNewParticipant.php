@@ -131,6 +131,8 @@ function processAnswerArray($answerArray) {
 		 	// do nothing
 		 } else {
 		 	for($i = 1; $i < $arraySize; $i++) {
+		 		echo "$i: ". $answerArray[$i]. "<br>";
+		 		echo "$i+1: " .$answerArray[$i-1]. "<br>";
 				if ($answerArray[$i] - $answerArray[$i-1] != 1) {
 					echo "CONDITION TRIGGERED <br>";
 					$start = $answerArray[$i];
