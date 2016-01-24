@@ -122,21 +122,21 @@ function processAnswerArray($answerArray) {
 		//$returnStr .= "between ";
 		//$previousAnswer = -1;
 		//$counter = 0;
-		
+
 		$arraySize = sizeof($answerArray);
 		$start = $answerArray[0];
 		$end = $answerArray[$arraySize - 1];
 
-		// if ($start != 1 && $end != 24) {
+		 if ($start != 1 && $end != 24) {
 		// 	// do nothing
-		// } else {
-		// 	for($i = 0; $i < $arraySize; $i++) {
-		// 		if ($answerArray[$i+1] - $answerArray[$i] != 1) {
-		// 			$start = $answerArray[$i+1];
-		// 			$end = $answerArray[$i];
-		// 		}
-		// 	}
-		// }
+		 } else {
+		 	for($i = 0; $i < $arraySize; $i++) {
+				if ($answerArray[$i+1] - $answerArray[$i] != 1) {
+					$start = $answerArray[$i+1];
+					$end = $answerArray[$i];
+				}
+			}
+		}
 		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
 
 		return $returnStr;
