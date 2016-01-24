@@ -121,7 +121,7 @@ function processAnswerArray($answerArray) {
 			// do nothing
 		} else {
 			for($i = 0; $i < $arraySize; $i++) {
-				if ($answerArray[$i+1] - $answerArray[i] != 1) {
+				if ($answerArray[$i+1] - $answerArray[$i] != 1) {
 					$start = $answerArray[$i+1];
 					$end = $answerArray[$i];
 				}
