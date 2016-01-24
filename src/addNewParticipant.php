@@ -102,7 +102,7 @@ if(in_array($noOfParticipant, $timeArray)){
 	}
 
 	$str = processAnswerArray($answerArray, $localGMT);
-	//echo $str;
+	echo $str;
 
 	header('Location: eventMain.php?event='.$eventCode.'&returnStr="'.$str.'"');
 	
@@ -143,6 +143,7 @@ function processAnswerArray($answerArray, $localGMT) {
 
 		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
 	}
+
 	return $returnStr;
 }
 
