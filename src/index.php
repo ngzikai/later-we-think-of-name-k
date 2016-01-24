@@ -36,8 +36,8 @@
 			<section id="banner">
 				<i class="fa fa-calendar fa-4x"></i>
 				<br>
-				<h2>LATERK</h2>
-				<p>We help popz ppl to sync time</p>
+				<h2>LATER,K</h2>
+				<p>Schedule Meetings Across Different TimeZones</p>
 				<a href="input.php">
 					<input type="submit" class="special" value="INPUT TIME SLOT" />
 				</a>
