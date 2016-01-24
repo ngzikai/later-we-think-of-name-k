@@ -6,6 +6,7 @@ include 'connectDB.php';
 
 $shortlink = $_POST["shortlink"];
 $eventCode = $_POST["event_code"];
+$localGMT = $_POST["gmt"];
 
 $sqlInsert = "INSERT INTO event_participants (event_code, shortlink)
         		VALUES ('".$eventCode."', '".$shortlink."')";
@@ -98,14 +99,10 @@ if(in_array($noOfParticipant, $timeArray)){
 		}
 	}
 
-	$resultsArr = processAnswerArray($answerArray);
+	$str = processAnswerArray($answerArray);
 	//echo $str;
 
-	$returnStart = $resultsArr[0];
-	$returnEnd = $resultsArr[1];
-
-
-	header('Location: eventMain.php?event_code='.$eventCode.'&start="'.$returnStart.'"&end="'.$returnEnd.'"');
+	header('Location: eventMain.php?event_code='.$eventCode.'&returnStr="'.$str.'"');
 	
 }
 
@@ -145,11 +142,9 @@ function processAnswerArray($answerArray) {
 		$start = formatTime($start);
 		$end = formatTime($end);
 
-		$returnArr = array();
-		array_push($returnArr, $start);
-		array_push($returnArr, $end);
+		$returnStr .= "between " .$start. "00hrs and " .$end."00hrs.";
 
-		return $returnArr;
+		return $returnStr;
 	}
 }
 
@@ -164,6 +159,14 @@ function processTime($time, $gmt){
 }
 
 function formatTime($time){
+	$time += $localGMT;
+
+	if($time >= 24){
+		$time -= 24;
+	}elseif($time < 0){
+		$time += 24;
+	}
+
 	$timeStr = strval($time);
 
 	if(strlen($timeStr) == 1){
